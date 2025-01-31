@@ -1,0 +1,5 @@
+<form role="form" method="post" action="<?= action ?>">
+    <? for(let i = 0; i < fields.length; i++) { ?>
+        <?- include('./text-field', fields[i]) ?>
+    <? } ?>
+</form>

@@ -1,0 +1,77 @@
+<?_ layout('promo') _?>
+
+    <? if (items.length > 3) { ?>
+        <h2>More than 3 items</h2>
+    <? } else { ?>
+        <h2>Less than 4 items</h2>
+    <? } ?>
+
+        <div class="container">
+            <div class="row">
+          
+              <div class="main">
+          
+                <h3><?- form_title ?>, or <a href="#">Sign Up</a></h3>
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-md-6">
+                    <a href="#" class="btn btn-lg btn-info btn-block">Google</a>
+                  </div>
+                </div>
+
+                <div class="login-or">
+                    <hr class="hr-or">
+                    <span class="span-or">or</span>
+                  </div>
+
+                <?- include('composants/form', {
+                    'action': '/toto',
+                    'fields': [
+                        {
+                            "name": "user",
+                            "title": "Hello world",
+                            "placeholder": "Whatsup"
+                        },
+                        {
+                            "name": "name",
+                            "title": "Your name ?"
+                        }
+                    ]
+                }) ?>
+
+
+                <div class="login-or">
+                  <hr class="hr-or">
+                  <span class="span-or">or</span>
+                </div>
+          
+                <form role="form" method="post" action="/login">
+                    <?- include('composants/text-field', {
+                        'name': 'user',
+                        'title': 'Votre nom ?'
+                    }) ?>
+                    <?- include('composants/text-field', {
+                        'name': 'lastname',
+                        'title': 'Votre prénom ?'
+                    }) ?>
+                  <div class="form-group">
+                    <a class="pull-right" href="#">Forgot password?</a>
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                  </div>
+                  <div class="checkbox pull-right">
+                    <label>
+                      <input type="checkbox">
+                      Remember me </label>
+                  </div>
+                  <button type="submit" class="btn btn btn-primary">
+                    Log In
+                  </button>
+                </form>
+              
+              </div>
+              
+            </div>
+          </div>

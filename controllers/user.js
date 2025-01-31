@@ -10,6 +10,10 @@ module.exports = function(app) {
         });
     });
     app.post('/login', function(req, res) {
-        res.send('Login ?');
+        res.render('login', {
+            'site_title': 'Amazing website',
+            'form_title': 'Who <strong>are</strong> you ?',
+            'result': req.body.username == 'root' && req.body.password == 'god' ? 'pass': 'fail'
+        });
     });
 }

@@ -10,6 +10,8 @@
   "author": "Ioan CHIRIAC",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.21.2"
+    "bootstrap": "^3.4.1",
+    "express": "^4.21.2",
+    "jquery": "^3.7.1"
   }
 }

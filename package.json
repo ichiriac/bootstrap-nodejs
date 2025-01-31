@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap-nodejs",
+  "version": "0.0.1",
+  "description": "Test deploy nodejs website with a express stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ioan CHIRIAC",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
